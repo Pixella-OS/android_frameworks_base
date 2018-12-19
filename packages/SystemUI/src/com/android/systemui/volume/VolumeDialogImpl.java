@@ -686,7 +686,6 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
 
         mSettingsView = mDialog.findViewById(R.id.settings_container);
         mSettingsIcon = mDialog.findViewById(R.id.settings);
-
         mRoundedBorderBottom = mDialog.findViewById(R.id.rounded_border_bottom);
 
         if (mVolumePanelOnLeft) {
