@@ -288,7 +288,6 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
     private Consumer<Boolean> mCrossWindowBlurEnabledListener;
     private BackgroundBlurDrawable mDialogRowsViewBackground;
     private final InteractionJankMonitor mInteractionJankMonitor;
-
     private boolean mSeparateNotification;
 
     @VisibleForTesting
@@ -301,6 +300,8 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
 
     private FrameLayout mRoundedBorderBottom;
 
+    // Variable to track the default row with which the panel is initially shown
+    private VolumeRow mDefaultRow = null;
     public VolumeDialogImpl(
             Context context,
             VolumeDialogController volumeDialogController,
