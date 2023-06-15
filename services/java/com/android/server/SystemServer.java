@@ -1679,6 +1679,9 @@ public final class SystemServer implements Dumpable {
 
             t.traceBegin("StartPowerOffAlarmService");
             mSystemServiceManager.startService(PowerOffAlarmService.class);
+
+            t.traceBegin("StartSmart5gService");
+            mSystemServiceManager.startService(Smart5gService.class);
             t.traceEnd();
 
         } catch (Throwable e) {
@@ -2540,22 +2543,13 @@ public final class SystemServer implements Dumpable {
                 mSystemServiceManager.startService(LineageHardwareService.class);
                 t.traceEnd();
             }
-<<<<<<< HEAD
-=======
 
-            // CustomGlobalActionsService
-            if (!mOnlyCore){
-                t.traceBegin("StartCustomGlobalActionsService");
-                mSystemServiceManager.startService(CustomGlobalActionsService.class);
-                t.traceEnd();
-            }
             // LiveDisplay
             if (!mOnlyCore){
                 t.traceBegin("StartLiveDisplayService");
                 mSystemServiceManager.startService(LiveDisplayService.class);
                 t.traceEnd();
             }
->>>>>>> 00f980bd981b (Introduce LiveDisplay from Lineage)
         }
 
         t.traceBegin("StartMediaProjectionManager");
