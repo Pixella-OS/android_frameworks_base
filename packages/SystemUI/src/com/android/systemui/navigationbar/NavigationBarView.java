@@ -83,11 +83,8 @@ import com.android.systemui.shared.system.QuickStepContract;
 import com.android.systemui.statusbar.phone.AutoHideController;
 import com.android.systemui.statusbar.phone.CentralSurfaces;
 import com.android.systemui.statusbar.phone.LightBarTransitionsController;
-<<<<<<< HEAD
-=======
 import com.android.systemui.tuner.TunerService;
 import com.android.systemui.statusbar.policy.Offset;
->>>>>>> cf71679d9560 (SystemUI: Implement burn-in protection for status/navbar)
 import com.android.wm.shell.back.BackAnimation;
 import com.android.wm.shell.pip.Pip;
 

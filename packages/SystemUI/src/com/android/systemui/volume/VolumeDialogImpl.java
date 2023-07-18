@@ -320,8 +320,6 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
     // Number of animating rows
     private int mAnimatingRows = 0;
 
-    // Variable to track the default row with which the panel is initially shown
-    private VolumeRow mDefaultRow = null;
     public VolumeDialogImpl(
             Context context,
             VolumeDialogController volumeDialogController,

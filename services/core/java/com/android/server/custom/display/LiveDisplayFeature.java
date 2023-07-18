@@ -21,7 +21,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.util.Log;
-
+import android.hardware.display.ColorDisplayManager;
 import com.android.server.custom.common.UserContentObserver;
 import com.android.server.custom.display.LiveDisplayService.State;
 import com.android.server.custom.display.TwilightTracker.TwilightState;
@@ -36,7 +36,6 @@ import static com.android.server.custom.display.LiveDisplayService.DISPLAY_CHANG
 import static com.android.server.custom.display.LiveDisplayService.MODE_CHANGED;
 import static com.android.server.custom.display.LiveDisplayService.TWILIGHT_CHANGED;
 
-import com.android.internal.app.ColorDisplayController;
 
 public abstract class LiveDisplayFeature {
 
@@ -53,7 +52,7 @@ public abstract class LiveDisplayFeature {
     public LiveDisplayFeature(Context context, Handler handler) {
         mContext = context;
         mHandler = handler;
-        mNightDisplayAvailable = ColorDisplayController.isAvailable(mContext);
+        mNightDisplayAvailable = ColorDisplayManager.isNightDisplayAvailable(mContext);
     }
 
     public abstract void onStart();
