@@ -787,7 +787,7 @@ public class CentralSurfacesImpl implements CoreStartable, CentralSurfaces, Tune
             Provider<FingerprintManager> fingerprintManager,
             TunerService tunerService
     ) {
-        BurnInProtectionController burnInProtectionController) {
+        BurnInProtectionController burnInProtectionController;
         mContext = context;
         mNotificationsController = notificationsController;
         mFragmentService = fragmentService;
@@ -4566,6 +4566,6 @@ public class CentralSurfacesImpl implements CoreStartable, CentralSurfaces, Tune
                 && mBiometricUnlockController.getMode()
                 != BiometricUnlockController.MODE_WAKE_AND_UNLOCK;
     }
-            }
-        }
+}
+
 
